@@ -16,19 +16,20 @@ with open("model/tokenizer.pickle", "rb") as handle:
 
 @app.route("/app", methods=["GET", "POST"])
 def hello_word(name=None):
-	if(request.method == "POST"):
-		request_body = request.get_json()
-		turn_1 = request_body.get("turn_1", "")
-		turn_2 = request_body.get("turn_2", "")
-		turn_3 = request_body.get("turn_3", "")
-		# emotion = get_emotion(turn_1, turn_2, turn_3)
-		emotion = "happy"
-		response = make_response(json.dumps({'success': True, 'emotion': emotion}))
-		response.status_code = 200
-		response.headers['Content-Type'] = 'application/json'
-		return response
+	# if(request.method == "POST"):
+	# 	request_body = request.get_json()
+	# 	turn_1 = request_body.get("turn_1", "")
+	# 	turn_2 = request_body.get("turn_2", "")
+	# 	turn_3 = request_body.get("turn_3", "")
+	# 	# emotion = get_emotion(turn_1, turn_2, turn_3)
+	# 	emotion = "happy"
+	# 	response = make_response(json.dumps({'success': True, 'emotion': emotion}))
+	# 	response.status_code = 200
+	# 	response.headers['Content-Type'] = 'application/json'
+	# 	return response
 	
-	return render_template("index.html", name = name)
+	# return render_template("index.html", name = name)
+	return "Hello, World!"
 
 
 @app.route("/get_my_ip", methods=["GET"])
