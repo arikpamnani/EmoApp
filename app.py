@@ -9,9 +9,9 @@ app = Flask(__name__)
 MAX_SEQUENCE_LENGTH = 100
 with open("model/tokenizer.pickle", "rb") as handle:
 	tokenizer = pickle.load(handle) 
-#model = load_model("model/model.h5")
-#model._make_predict_function()	# https://github.com/keras-team/keras/issues/6462
-#label2emotion = {0:"others", 1:"happy", 2: "sad", 3:"angry"}
+model = load_model("model/model.h5")
+model._make_predict_function()	# https://github.com/keras-team/keras/issues/6462
+label2emotion = {0:"others", 1:"happy", 2: "sad", 3:"angry"}
 
 
 @app.route("/app", methods=["GET", "POST"])
