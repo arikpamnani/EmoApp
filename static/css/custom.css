@@ -1,0 +1,28 @@
+body {
+	text-align: center;
+}
+
+.heading-small {
+	font-size: 1.2em;
+}
+
+.label-left {
+	float: left;
+}
+
+label#break {
+	display: block;
+	clear: both;
+}
+
+hr {
+    height: 1.5px;
+    background-color: #BBB; 
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 1em;
+    width: 100%;
+}

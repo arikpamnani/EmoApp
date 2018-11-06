@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EmoApp</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/css/uikit.min.css" />
+        <link rel="stylesheet" href="../static/css/custom.css">
+        <link rel="icon" href="../static/images/favicon.ico" type="image/gif" sizes="16x16">
+    </head>
+    <body>
+    	<div uk-grid>
+			<div class="uk-card uk-card-primary uk-card-body uk-card-small uk-width-1-1@m">
+	    		<h2 class="uk-heading-bullet">EmoApp</h2>
+	    		<p class="uk-margin">
+	    			Understanding the emotion of a conversation using Deep Learning and NLP
+	    		</p> 
+			</div>
+		</div>
+		<div class="uk-text-center uk-grid">
+			<div class="uk-width-1-2@m">
+				<div style="text-align: left; margin-left: 3em; margin-right: 3em;">
+					<div class="uk-text-emphasis uk-text-bold" style="font-size: 1.2em;">
+						Enter a conversation
+					</div>
+					<p style="font-size: 0.9em;">Turn 1 and 3 correspond to Person 1 while Turn 2 corresponds to Person 2. EmoApp detects the emotion of Person 1.</p>
+				</div>
+				<form class="uk-form-horizontal" id="conv_form" style="margin-top: 2.5em;">
+	    			<div class="uk-margin">
+				        <label class="uk-form-label uk-text-bold" for="turn_1">Turn 1</label>
+				        <div class="uk-form-controls">
+				            <input class="uk-input" type="text" id="turn_1">
+				        </div>
+				    </div>
+				    <div class="uk-margin">
+				        <label class="uk-form-label uk-text-bold" for="turn_2">Turn 2</label>
+				        <div class="uk-form-controls">
+				            <input class="uk-input" type="text" id="turn_2">
+				        </div>
+				    </div>
+				    <div class="uk-margin">
+				        <label class="uk-form-label uk-text-bold" for="turn_3">Turn 3</label>
+				        <div class="uk-form-controls">
+				            <input class="uk-input" type="text" id="turn_3">
+				        </div>
+				    </div>
+				    <p uk-margin>
+					    <button class="uk-button uk-button-danger" id="analyze" style="border-radius: 12px;">Analyze</button>
+					</p>
+				</form>
+			</div>
+			<div class="uk-width-1-2@m uk-grid">
+				<div style="text-align: left; margin-left: 3em; margin-right: 3em;">
+					<div class="uk-text-emphasis uk-text-bold" style="font-size: 1.2em;">
+						Emotion detected
+					</div>
+					<p style="font-size: 0.9em;">Our LSTM based model classifies the emotion of Person 1 in 4 classes - Others, Happy, Angry, and Sad.</p>
+				</div>
+				<div class="uk-width-1-4@m">
+					<img id="others" data-src="static/images/others.png" alt="" uk-img style="margin-top: 10%;" height=80px" width="80px">
+				</div>
+				<div class="uk-width-1-4@m">
+					<img id="happy" data-src="static/images/happy.png" alt="" uk-img style="margin-top: 10%;" height="80px" width="80px">
+				</div>
+				<div class="uk-width-1-4@m">
+					<img id="sad" data-src="static/images/sad.png" alt="" uk-img style="margin-top: 10%;" height="80px" width="80px">
+				</div>
+				<div class="uk-width-1-4@m">
+					<img id="angry" data-src="static/images/angry.png" alt="" uk-img style="margin-top: 10%;" height="80px" width="80px">
+				</div>
+			</div>
+			<div class="uk-width-1-1@m" id="footer">
+				<p>Developed as a part of SemEval 2019's EmoContext task</p>
+			</div>
+		</div>
+		<script src="../static/js/uikit.min.js"></script>
+        <script src="../static/js/uikit-icons.min.js"></script>
+        <script src="../static/js/jquery-3.3.1.min.js"></script>
+        <script src="../static/js/custom.js"></script>
+    </body>
+</html>
