@@ -1,3 +1,6 @@
+import os
+os.environ["KERAS_BACKEND"] = "theano"
+
 import json, pickle, re, time 
 from flask import Flask, render_template, request, make_response, jsonify
 from keras.models import load_model
