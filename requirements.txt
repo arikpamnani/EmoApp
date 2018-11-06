@@ -12,7 +12,7 @@ Pillow==3.1.1
 pyparsing==2.1.1
 python-dateutil==2.5.1
 pytz==2016.3
-pypiwin32=223
+pypiwin32==223
 PyYAML==3.13
 scipy==1.1.0
 six==1.10.0
