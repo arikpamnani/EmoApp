@@ -9,9 +9,9 @@ app = Flask(__name__)
 MAX_SEQUENCE_LENGTH = 100
 with open("model/tokenizer.pickle", "rb") as handle:
 	tokenizer = pickle.load(handle) 
-model = load_model("model/model.h5")
-model._make_predict_function()	# https://github.com/keras-team/keras/issues/6462
-label2emotion = {0:"others", 1:"happy", 2: "sad", 3:"angry"}
+#model = load_model("model/model.h5")
+#model._make_predict_function()	# https://github.com/keras-team/keras/issues/6462
+#label2emotion = {0:"others", 1:"happy", 2: "sad", 3:"angry"}
 
 
 @app.route("/app", methods=["GET", "POST"])
@@ -21,7 +21,8 @@ def hello_word(name=None):
 		turn_1 = request_body.get("turn_1", "")
 		turn_2 = request_body.get("turn_2", "")
 		turn_3 = request_body.get("turn_3", "")
-		emotion = get_emotion(turn_1, turn_2, turn_3)
+		# emotion = get_emotion(turn_1, turn_2, turn_3)
+		emotion = "happy"
 		response = make_response(json.dumps({'success': True, 'emotion': emotion}))
 		response.status_code = 200
 		response.headers['Content-Type'] = 'application/json'
