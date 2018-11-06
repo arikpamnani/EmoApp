@@ -21,7 +21,6 @@ protobuf==3.1.0
 pyparsing==2.1.1
 python-dateutil==2.5.1
 pytz==2016.3
-pywin32==217
 PyYAML==3.13
 scipy==1.1.0
 six==1.11.0
