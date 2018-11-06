@@ -5,9 +5,9 @@ function change_hw(id, val) {
 
 
 $(document).ready(function() {
-	$("#turn_1").val("I am in love!");
-	$("#turn_2").val("with whom???");
-	$("#turn_3").val("with NLP");
+	$("#turn_1").val("Hi!");
+	$("#turn_2").val("Hey!, How are you?");
+	$("#turn_3").val("I am great!");
 
 	$("#analyze").click(function(e) {
 		e.preventDefault();
