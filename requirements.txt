@@ -1,6 +1,6 @@
 Click==7.0
 cycler==0.10.0
-Django==1.9
+Django==1.11.29
 Flask==1.0.2
 funcsigs==1.0.2
 gunicorn==19.9.0
