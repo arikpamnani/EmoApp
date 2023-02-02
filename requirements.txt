@@ -27,4 +27,4 @@ six==1.11.0
 sympy==0.7.6.1
 tensorflow==2.4.0
 virtualenv==14.0.6
-Werkzeug==0.14.1
+Werkzeug==0.15.5
